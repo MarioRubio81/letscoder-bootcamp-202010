@@ -3,41 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>PAGINA EN OBRAS</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Hello World App</h1>
+    <h1 class="title">PAGINA EN OBRAS</h1>
 
-    <section>
-        <button>Register</button> or <button>Login</button>
+    <section class="home">
+        <button class="home__register">Register</button> or <button class="home__login">Login</button>
     </section>
 
-    <section class="off">
+    <section class="register off">
         <h2>Register</h2>
-            <form action="">
+            <form class="register__form">
                 <input type="text" name="fullname" placeholder="full name" required>
-                <input type="e-mail" name="e-mail" placeholder="e-mail" required>
+                <input type="email" name="email" placeholder="e-mail" required>
                 <input type="password" name="password" placeholder="password" required>
-                <input type="password" name="password" placeholder="password" required>
-                <button type="submit">Register</button>
+                <input type="password" name="repassword" placeholder="repeat password" required>
+                <button>Register</button>
             </form>
     </section>
 
-    <section class="off">
+    
+
+    <section class="register-confirm off">
+        Xa tas fichado, ahora tira para <button class="register-confirm__login">Login</button><div class="">
+    </section>
+    <section>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, voluptatum eos quidem excepturi doloribus iure facere delectus deserunt corrupti quas perspiciatis, tempora, suscipit quaerat qui facilis? Eveniet labore impedit architecto?
+    </section>
+
+    <section class="login off">
         <h2>Login</h2>
-            <form action="">
+            <form class="login__form">
                 <input type="e-mail" name="e-mail" placeholder="e-mail" required>
                 <input type="password" name="password" placeholder="password" required>
-                <button type="submit">Login</button>
+                <button>Login</button>
             </form>
     </section>
     
-    <section class="off">
-        <h2>WELCOME!</h2>
+    <section class="welcome off">
+        <h2>Xa tas dentro!</h2>
     </section>
-
-    <script src="main.js"></script>
+<!-- LOS SCRIPT EN ESTE ORDEN PARA QUE CARGUEN CORRECTAMENTE LOS DATOS-->
+    <script src="./data.js"></script>
+    <script src="./logic.js"></script>
+    <script src="./main.js"></script>
     
 </body>
 </html>

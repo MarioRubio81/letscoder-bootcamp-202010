@@ -1,0 +1,1 @@
+var users = [{fullname: "Mario Rubio", email:"asd@asd.com", password:"123"}];
