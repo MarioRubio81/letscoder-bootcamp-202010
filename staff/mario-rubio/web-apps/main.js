@@ -76,25 +76,34 @@ var users = [];
 })();
 
 
-   //LOGIN FUNCTION
+   //Log in 
+   (function() {
+    
+    var welcome = document.querySelectorAll('section')[3];
+    var errorLogin = document.querySelectorAll('section')[4];
+    var login = document.querySelectorAll('form')[1];
 
-(function() { 
-      
-    var login = document.querySelector('button');
+    login.onsubmit = function(event) {
+        event.preventDefault();
+        var input = document.querySelectorAll('input');
+        var email = input[4].value;
+        var password = input[5].value;
+        var result;
 
-    login.onclick = function() {
-        var options = document.querySelector('section');
+        if (!email.trim().length) throw new Error('email is empty or blank');
+        if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) throw new Error('invalid e-mail');
+        if (!password.trim().length) throw new Error('password is empty or blank');
 
-        options.classList.remove('off');
+        result = users.find(function(user) {return user.email === email && user.password === password});
+        console.log('the result is:', result);
 
-        var login = document.querySelectorAll('section')[2];
+        if (result) {
+            welcome.classList.remove('off');
+        } else{
+            welcome.classList.add('off');
+            errorLogin.classList.remove('off');
+        }
 
-        login.classList.add('off')
     }
     
-   /* if (users.find(function(user) {return user.email === "mario81@gmail.com" && user.password === "123"}
-      ))  */
-
-
 })();
-
