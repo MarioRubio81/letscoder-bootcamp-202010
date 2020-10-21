@@ -1,107 +1,102 @@
 //HOME: para que nos lleve de nuevo a HOME clicando en el título de la página
 (function(){
-    var title =document.querySelector(".title")
+    var title =document.querySelector(".title");
 
     title.onclick = function(){
             var sections = document.querySelectorAll ("section")
             for (var i=0; i<sections.length; i++)
-                sections[i].classList.add("off") 
+                sections[i].classList.add("off"); 
             
-            var home = document.querySelector(".home")
-            home.classList.remove("off") 
+            var home = document.querySelector(".home");
+            home.classList.remove("off"); 
 
     }
-
 })();
 
 //HOME: inicio (options)
 (function () {
-    var home = document.querySelector('.home')
-
-    var register = home.querySelector('.home__register')
+    var home = document.querySelector('.home');
+    var register = home.querySelector('.home__register');
 
     register.onclick = function () {
-        home.classList.add('off')
+        home.classList.add('off');
 
-        var register = document.querySelector('.register')
+        var register = document.querySelector('.register');
 
-        register.classList.remove('off')
+        register.classList.remove('off');
     }
 
-    var login = home.querySelector('.home__login')
+    var login = home.querySelector('.home__login');
 
     login.onclick = function () {
-        home.classList.add('off')
+        home.classList.add('off');
 
-        var login = document.querySelector('.login')
+        var login = document.querySelector('.login');
 
-        login.classList.remove('off')
+        login.classList.remove('off');
     }
 })();
 
 //REGISTER
 (function() {
-    var register = document.querySelector('.register')
-
-    var form = register.querySelector('.register__form')
+    var register = document.querySelector('.register');
+    var form = register.querySelector('.register__form');
 
     form.onsubmit = function (event) { // ONSUBMIT
-        event.preventDefault()
+        event.preventDefault();
 
-        var inputs = form.querySelectorAll('input')
+        var inputs = form.querySelectorAll('input');
 
-        var fullname = inputs[0].value
-        var email = inputs[1].value
-        var password = inputs[2].value
-        var repassword = inputs[3].value
+        var fullname = inputs[0].value;
+        var email = inputs[1].value;
+        var password = inputs[2].value;
+        var repassword = inputs[3].value;
 
-        registerUser(fullname, email, password, repassword)
+        registerUser(fullname, email, password, repassword);
 
-        register.classList.add('off')
+        register.classList.add('off');
 
-        var confirm = document.querySelector('.register-confirm')
+        var confirm = document.querySelector('.register-confirm');
 
-        confirm.classList.remove('off')
+        confirm.classList.remove('off');
     }
 })();
 
 
 //REGISTER CONFIRM
 (function () {
-    var confirm = document.querySelector('.register-confirm')
-
-    var login = confirm.querySelector('.register-confirm__login')
+    var confirm = document.querySelector('.register-confirm');
+    var login = confirm.querySelector('.register-confirm__login');
 
     login.onclick = function () {
-        confirm.classList.add('off') 
+        confirm.classList.add('off'); 
 
-        var login = document.querySelector('.login')
+        var login = document.querySelector('.login');
 
-        login.classList.remove('off')
+        login.classList.remove('off');
     }
 })();
 
 
    //LOGIN 
    (function () {
-    var login = document.querySelector('.login')
-
-    var form = login.querySelector('.login__form')
+    var login = document.querySelector('.login');
+    var form = login.querySelector('.login__form');
 
     form.onsubmit = function (event) {
-        event.preventDefault()
+        event.preventDefault();
 
-        var inputs = form.querySelectorAll('input')
+        var inputs = form.querySelectorAll('input');
 
-        var email = inputs[0].value
-        var password = inputs[1].value
+        var email = inputs[0].value;
+        var password = inputs[1].value;
 
-        authenticateUser(email, password)
+        authenticateUser(email, password);
 
-        login.classList.add('off')
+        login.classList.add('off');
 
-        var welcome = document.querySelector('.welcome')
+        var welcome = document.querySelector('.welcome');
 
-        welcome.classList.remove('off')
+        welcome.classList.remove('off');
     }
 })(); 
