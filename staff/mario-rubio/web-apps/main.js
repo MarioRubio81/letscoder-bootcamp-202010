@@ -45,7 +45,7 @@
 
     var form = register.querySelector('.register__form')
 
-    form.onsubmit = function (event) {
+    form.onsubmit = function (event) { // ONSUBMIT
         event.preventDefault()
 
         var inputs = form.querySelectorAll('input')
@@ -73,7 +73,7 @@
     var login = confirm.querySelector('.register-confirm__login')
 
     login.onclick = function () {
-        confirm.classList.add('off')
+        confirm.classList.add('off') 
 
         var login = document.querySelector('.login')
 
