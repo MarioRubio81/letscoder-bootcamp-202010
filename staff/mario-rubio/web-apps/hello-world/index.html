@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAGINA EN OBRAS</title>
+    <title>Hello World App</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1 class="title">PAGINA EN OBRAS</h1>
+    <h1 class="title">Hello World App</h1>
 
     <section class="home">
         Please, <button class="home__register">Register</button> or <button class="home__login">Login</button> if you have an account.
@@ -27,7 +27,7 @@
     
 
     <section class="register-confirm off">
-        Xa tas fichado, ahora tira para <button class="register-confirm__login">Login</button><div class="">
+        User registered successfully, proceed to <button class="register-confirm__login">Login</button>
     </section>
     <section>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, voluptatum eos quidem excepturi doloribus iure facere delectus deserunt corrupti quas perspiciatis, tempora, suscipit quaerat qui facilis? Eveniet labore impedit architecto?
     </section>
@@ -42,11 +42,19 @@
     </section>
     
     <section class="welcome off">
-        <h2>Xa tas dentro!</h2>
+        <h2>Welcomw to Hello World App!</h2>
     </section>
 <!-- LOS SCRIPT EN ESTE ORDEN PARA QUE CARGUEN CORRECTAMENTE LOS DATOS-->
     <script src="./data.js"></script>
-    <script src="./logic.js"></script>
+    <script src="./logic/register-user.js"></script>
+    <script src="./logic/authenticate-user.js"></script>
+
+    <script src="./components/tittle.js"></script>
+    <script src="./components/home.js"></script>
+    <script src="./components/register.js"></script>
+    <script src="./components/register-confirm.js"></script>
+    <script src="./components/login.js"></script>
+    
     <script src="./main.js"></script>
         
 </body>
