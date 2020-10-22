@@ -3,13 +3,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Dokdo&display=swap");
 * {
   border: 1px solid yellow;
-  font-family: Roboto Condensed;
 }
 
 body {
   background-image: url(./ladrillos1.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
+  font-family: Roboto Condensed;
+  height: 1000px;
 }
 
 button {
@@ -24,11 +25,11 @@ button:focus {
 }
 
 .title {
-  height: 100px;
+  height: 150px;
   width: 70%;
   font-family: Dokdo;
   text-shadow: 5px 5px #89a18bd3;
-  font-size: 100px;
+  font-size: 150px;
   color: #a84b0c;
   text-align: center;
   margin-right: auto;
