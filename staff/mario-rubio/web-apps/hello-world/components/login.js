@@ -1,21 +1,18 @@
-function mountLogin(selector, onLogin) {
-    
-    var login = document.querySelector(selector);
-
-    var form = login.querySelector('.login__form');
+function mountLogin(container, onLogin) {
+    var form = container.querySelector('.login__form')
 
     form.onsubmit = function (event) {
-        event.preventDefault();
+        event.preventDefault()
 
-        var inputs = form.querySelectorAll('input');
+        var inputs = form.querySelectorAll('input')
 
-        var email = inputs[0].value;
-        var password = inputs[1].value;
+        var email = inputs[0].value
+        var password = inputs[1].value
 
         try {
-            onLogin(email, password);
+            onLogin(email, password)
         } catch (error) {
-            alert(error.message);
+            alert(error.message)
         }
     }
-} 
+}

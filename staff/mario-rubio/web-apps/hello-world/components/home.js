@@ -1,13 +1,9 @@
-function mountHome(selector, onRegister, onLogin) {
+function mountHome(container, onRegister, onLogin) {
+    var register = container.querySelector('.home__register')
 
-    var home = document.querySelector(selector);
+    register.onclick = onRegister
 
-    var register = home.querySelector('.home__register');
+    var login = container.querySelector('.home__login')
 
-    register.onclick = onRegister;
-
-    var login = home.querySelector('.home__login');
-
-    login.onclick = onLogin;
-    
+    login.onclick = onLogin
 }
