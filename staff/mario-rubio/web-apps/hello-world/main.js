@@ -1,69 +1,74 @@
 
 (function(){
 
+
 //TITLE
-mountTitle('.title', function () {
-    var sections = document.querySelectorAll('section')
+    mountTitle('.title', function () {
+        var sections = document.querySelectorAll('section');
 
-    for (var i = 0; i < sections.length; i++)
-        sections[i].classList.add('off')
+            for (var i = 0; i < sections.length; i++);
+                sections[i].classList.add('off');
 
-    home.classList.remove('off') 
+        home.classList.remove('off') ;
     });
+
 
 //HOME
-var home = document.querySelector('.home')
+    var home = document.querySelector('.home');
 
-mountHome(home, function () {
-    home.classList.add('off')
+    mountHome(home, function () {
+        home.classList.add('off');
 
-    register.classList.remove('off')
-}, function () {
-    home.classList.add('off')
+        register.classList.remove('off');
+        }, function () {
+        home.classList.add('off');
 
-    login.classList.remove('off')
+        login.classList.remove('off');
     });
-
 
 
 //REGISTER
-var register = document.querySelector('.register')
+    var register = document.querySelector('.register');
 
-mountRegister(register, function (fullname, email, password, repassword) {
-    registerUser(fullname, email, password, repassword, function (error) {
-        if (error)
-            alert(error.message)
-        else {
-            register.classList.add('off')
+    mountRegister(register, function (fullname, email, password, repassword) {
+        registerUser(fullname, email, password, repassword, function (error) {
+            if (error)
+                alert(error.message)
+            else {
+                register.classList.add('off');
 
-            confirm.classList.remove('off')
-        }
-    })
-})
+                confirm.classList.remove('off');
+            }
+        })
+    });
     
+
 //REGISTER CONFIRM
-ar confirm = document.querySelector('.register-confirm')
+    var confirm = document.querySelector('.register-confirm');
 
-mountRegisterConfirm(confirm, function () {
-    confirm.classList.add('off')
+    mountRegisterConfirm(confirm, function () {
+        confirm.classList.add('off');
 
-    login.classList.remove('off')
-})
+        login.classList.remove('off');
+    });
+
 
 //LOGIN 
-var login = document.querySelector('.login')
+    var login = document.querySelector('.login');
 
-mountLogin(login, function (email, password) {
-    authenticateUser(email, password, function(error, token) {
-        if (error)
-            alert(error.message)
-        else {
-            login.classList.add('off')
-    
-            var welcome = document.querySelector('.welcome')
-    
-            welcome.classList.remove('off')
-        }
+    mountLogin(login, function (email, password) {
+        authenticateUser(email, password, function(error, token) {
+            if (error)
+                alert(error.message)
+            else {
+                login.classList.add('off');
+        
+                var welcome = document.querySelector('.welcome');
+        
+                welcome.classList.remove('off');
+            }
+        })
     })
-})
+
+    
 })();
