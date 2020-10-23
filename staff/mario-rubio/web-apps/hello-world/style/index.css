@@ -15,26 +15,26 @@ button:focus {
   display: none;
 }
 
-.home {
+.access {
   border: 1px solid skyblue;
   padding: 1rem;
   border-radius: 1rem;
   text-align: center;
 }
-.home__register {
+.access__register {
   background-color: skyblue;
   color: white;
   border-radius: 1rem 0 1rem 0;
   padding: 0.4rem;
 }
-.home__login {
+.access__login {
   border-style: solid;
   border-color: skyblue;
   background-color: transparent;
   border-radius: 1rem 0 1rem 0;
   padding: 0.4rem;
 }
-.home__login:hover {
+.access__login:hover {
   background-color: #E9F6FD;
 }
 
